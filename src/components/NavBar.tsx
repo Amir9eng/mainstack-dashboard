@@ -1,19 +1,19 @@
 import { useState } from 'react';
+import logo from '../assets/mainstack-logo.svg';
+import dashboard from '../assets/dashboard.svg';
+import item1 from '../assets/edit.svg';
+import item2 from '../assets/group.svg';
+import item3 from '../assets/hourglass_empty.svg';
+import item4 from '../assets/add_a_photo.svg';
+import item5 from '../assets/delete.svg';
+import item6 from '../assets/subscriptions.svg';
+import item7 from '../assets/file_present.svg';
+import item8 from '../assets/alarm.svg';
+import dots from '../assets/more_horiz.svg';
+import menu from '../assets/menu-icon.svg';
+import close from '../assets/close-md-svgrepo-com(1).svg';
+import avatar from '../assets/unsplash_F16KPYxfm6s.png';
 import NavItem from './NavItem';
-import logo from './assets/mainstack-logo.svg';
-import dashboard from './assets/dashboard.svg';
-import item1 from './assets/edit.svg';
-import item2 from './assets/group.svg';
-import item3 from './assets/hourglass_empty.svg';
-import item4 from './assets/add_a_photo.svg';
-import item5 from './assets/delete.svg';
-import item6 from './assets/subscriptions.svg';
-import item7 from './assets/file_present.svg';
-import item8 from './assets/alarm.svg';
-import dots from './assets/more_horiz.svg';
-import menu from './assets/menu-icon.svg';
-import close from './assets/close-md-svgrepo-com(1).svg';
-import avatar from './assets/unsplash_F16KPYxfm6s.png';
 
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);

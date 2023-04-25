@@ -1,12 +1,12 @@
-import AreaChart from './AreaChart';
-import DonutChart from './DonutChart';
-import info from './assets/info.svg';
-import ng from './assets/Country=Nigeria, Style=Flag, Radius=On.svg';
-import us from './assets/Country=United States of America, Style=Flag, Radius=On.svg';
-import an from './assets/Country=Andorra, Style=Flag, Radius=On.svg';
-import nd from './assets/Country=Netherlands, Style=Flag, Radius=On.svg';
+import AreaChart from '../components/AreaChart';
+import DonutChart from '../components/DonutChart';
+import info from '../assets/info.svg';
+import ng from '../assets/Country=Nigeria, Style=Flag, Radius=On.svg';
+import us from '../assets/Country=United States of America, Style=Flag, Radius=On.svg';
+import an from '../assets/Country=Andorra, Style=Flag, Radius=On.svg';
+import nd from '../assets/Country=Netherlands, Style=Flag, Radius=On.svg';
 import { Tabs, TabList, Tab, TabPanel } from 'react-tabs';
-import './reactTabs.css';
+import '../components/reactTabs.css';
 
 const Dashboard = () => {
   const topLocation = {
@@ -30,23 +30,23 @@ const Dashboard = () => {
         <span className="text-[#FF5403]">View Analytics</span>
       </div>
       <Tabs defaultIndex={4}>
-        <TabList className="flex space-x-3 py-6">
-          <Tab className="px-4 py-2 rounded-full border-[#56616B] border-[1px] hover:cursor-pointer">
+        <TabList className="flex items-center justify-normal space-x-3 py-6 overflow-x-scroll lg:overflow-auto">
+          <Tab className="text-xs min-w-fit lg:text-base px-4 py-2 rounded-full border-[#56616B] border-[1px] hover:cursor-pointer">
             1 Day
           </Tab>
-          <Tab className="px-4 py-2 rounded-full border-[#56616B] border-[1px] hover:cursor-pointer">
+          <Tab className="text-xs min-w-fit lg:text-base px-4 py-2 rounded-full border-[#56616B] border-[1px] hover:cursor-pointer">
             3 Days
           </Tab>
-          <Tab className="px-4 py-2 rounded-full border-[#56616B] border-[1px] hover:cursor-pointer">
+          <Tab className="text-xs min-w-fit lg:text-base px-4 py-2 rounded-full border-[#56616B] border-[1px] hover:cursor-pointer">
             7 Days
           </Tab>
-          <Tab className="px-4 py-2 rounded-full border-[#56616B] border-[1px] hover:cursor-pointer">
+          <Tab className="text-xs min-w-fit lg:text-base px-4 py-2 rounded-full border-[#56616B] border-[1px] hover:cursor-pointer">
             30 Days
           </Tab>
-          <Tab className="px-4 py-2 rounded-full border-[#56616B] border-[1px] hover:cursor-pointer">
+          <Tab className="text-xs min-w-fit lg:text-base px-4 py-2 rounded-full border-[#56616B] border-[1px] hover:cursor-pointer">
             All time
           </Tab>
-          <Tab className="px-4 py-2 rounded-full border-[#56616B] border-[1px] hover:cursor-pointer">
+          <Tab className="text-xs min-w-fit lg:text-base px-4 py-2 rounded-full border-[#56616B] border-[1px] hover:cursor-pointer">
             Custom Date
           </Tab>
         </TabList>
@@ -61,19 +61,19 @@ const Dashboard = () => {
               <h2 className="font-bold">Page Views</h2>
               <img src={info} alt="" />
             </div>
-            <span className="inline-block text-xs mb-3">All time</span>
+            <span className="inline-block text-xs mb-3  ">All time</span>
             <h1 className="text-5xl font-bold">500</h1>
             <AreaChart></AreaChart>
           </div>
         </TabPanel>
       </Tabs>
       <div className="flex flex-col lg:flex-row lg:space-x-3 space-x-0 space-y-3 lg:space-y-0 mb-8">
-        <div className=" w-full h-[320px] p-8 border-[1px] border-[#EFF1F6] rounded-md">
+        <div className=" w-full h-auto lg:h-[320px] p-8 border-[1px] border-[#EFF1F6] rounded-md">
           <div className="flex justify-between">
             <span className="font-bold">Top Locations</span>
             <span className="font-thin text-[#FF5403]">View full reports</span>
           </div>
-          <div className="flex justify-between items-center mt-5">
+          <div className="flex flex-col-reverse lg:flex-row justify-between items-center mt-5">
             <div className="flex flex-col space-y-5">
               <div className="flex space-x-3">
                 <img src={ng} alt="" />
@@ -113,7 +113,7 @@ const Dashboard = () => {
             <span className="font-bold">Top Referral source</span>
             <span className="font-thin text-[#FF5403]">View full reports</span>
           </div>
-          <div className="flex justify-between items-center mt-5">
+          <div className="flex flex-col-reverse lg:flex-row  justify-between items-center mt-5">
             <div className="flex flex-col space-y-5">
               <div className="flex space-x-3">
                 <img src={ng} alt="" />
