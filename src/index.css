@@ -1,6 +1,26 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@layer base {
+  @font-face {
+    font-family: 'sohne';
+    src: url(/src/assets/fonts/TestSöhne/TestSöhne-Kräftig.otf)
+      format('opentype');
+    font-weight: normal;
+  }
+  @font-face {
+    font-family: 'sohne';
+    src: url(/src/assets/fonts/TestSöhne/TestSöhne-Leicht.otf)
+      format('opentype');
+    font-weight: lighter;
+  }
+  @font-face {
+    font-family: 'sohne';
+    src: url(/src/assets/fonts/TestSöhne/TestSöhne-Halbfett.otf)
+      format('opentype');
+    font-weight: bold;
+  }
+}
 
 .active {
   @apply border-[#FF5403] text-[#FF5403] fill-[#FF5403];

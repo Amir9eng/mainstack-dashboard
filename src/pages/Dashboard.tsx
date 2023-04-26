@@ -31,22 +31,22 @@ const Dashboard = () => {
       </div>
       <Tabs defaultIndex={4}>
         <TabList className="flex items-center justify-normal space-x-3 py-6 overflow-x-scroll lg:overflow-auto">
-          <Tab className="text-xs min-w-fit lg:text-base px-4 py-2 rounded-full border-[#56616B] border-[1px] hover:cursor-pointer">
+          <Tab className="text-xs min-w-fit lg:text-base px-4 py-2 rounded-full border-[#56616B] border-[1px] outline-none hover:cursor-pointer">
             1 Day
           </Tab>
-          <Tab className="text-xs min-w-fit lg:text-base px-4 py-2 rounded-full border-[#56616B] border-[1px] hover:cursor-pointer">
+          <Tab className="text-xs min-w-fit lg:text-base px-4 py-2 rounded-full border-[#56616B] border-[1px] outline-none hover:cursor-pointer">
             3 Days
           </Tab>
-          <Tab className="text-xs min-w-fit lg:text-base px-4 py-2 rounded-full border-[#56616B] border-[1px] hover:cursor-pointer">
+          <Tab className="text-xs min-w-fit lg:text-base px-4 py-2 rounded-full border-[#56616B] border-[1px] outline-none hover:cursor-pointer">
             7 Days
           </Tab>
-          <Tab className="text-xs min-w-fit lg:text-base px-4 py-2 rounded-full border-[#56616B] border-[1px] hover:cursor-pointer">
+          <Tab className="text-xs min-w-fit lg:text-base px-4 py-2 rounded-full border-[#56616B] border-[1px] outline-none hover:cursor-pointer">
             30 Days
           </Tab>
-          <Tab className="text-xs min-w-fit lg:text-base px-4 py-2 rounded-full border-[#56616B] border-[1px] hover:cursor-pointer">
+          <Tab className="text-xs min-w-fit lg:text-base px-4 py-2 rounded-full border-[#56616B] border-[1px] outline-none hover:cursor-pointer">
             All time
           </Tab>
-          <Tab className="text-xs min-w-fit lg:text-base px-4 py-2 rounded-full border-[#56616B] border-[1px] hover:cursor-pointer">
+          <Tab className="text-xs min-w-fit lg:text-base px-4 py-2 rounded-full border-[#56616B] border-[1px] outline-none hover:cursor-pointer">
             Custom Date
           </Tab>
         </TabList>
