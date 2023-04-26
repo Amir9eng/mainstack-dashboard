@@ -2,13 +2,9 @@ import AreaChart from '../components/AreaChart';
 import DonutChart from '../components/DonutChart';
 import info from '../assets/info.svg';
 import ng from '../assets/Country=Nigeria, Style=Flag, Radius=On.svg';
-import us from '../assets/Country=United States of America, Style=Flag, Radius=On.svg';
-import an from '../assets/Country=Andorra, Style=Flag, Radius=On.svg';
-import nd from '../assets/Country=Netherlands, Style=Flag, Radius=On.svg';
 import { Tabs, TabList, Tab, TabPanel } from 'react-tabs';
 import '../components/reactTabs.css';
 import { useEffect, useState } from 'react';
-import { fetchDashboardData } from '../Apiservices/dashboardApi';
 import axios from 'axios';
 
 const flags: any = {
@@ -46,22 +42,12 @@ const Dashboard = () => {
   }, []);
   const topReferralSource = topReferral.map((el) => el.source);
   const topReferralCount = topReferral.map((el) => el.count);
-  const topReferralPercent = topReferral.map((el) => el.percent);
   const topLocationCountry = topLocation.map((el) => el.country);
   const topLocationCount = topLocation.map((el) => el.count);
-  const topLocationPercent = topLocation.map((el) => el.percent);
 
   console.log(topReferralSource);
   console.log(topReferralCount);
 
-  // const topLocation = {
-  //   labels: ['Nigeria', 'United States', 'Netherlands', 'Andora', 'Others'],
-  //   series: [55, 22, 84, 23, 56],
-  // };
-  // const topReferral = {
-  //   labels: ['Nigeria', 'United States', 'Netherlands', 'Andora', 'Others'],
-  //   series: [73, 82, 14, 33, 56],
-  // };
   return (
     <section className="w-full px-5 py-5 lg:px-16 lg:py-0">
       <h1 className="py-2 lg:py-5 font-bold">Dashboard</h1>
@@ -108,7 +94,7 @@ const Dashboard = () => {
             </div>
             <span className="inline-block text-xs mb-3  ">All time</span>
             <h1 className="text-5xl font-bold">500</h1>
-            <AreaChart></AreaChart>
+            <AreaChart />
           </div>
         </TabPanel>
       </Tabs>
@@ -140,7 +126,7 @@ const Dashboard = () => {
                 series={topLocationCount}
                 labels={topLocationCountry}
                 colors={DonutColors}
-              ></DonutChart>
+              />
             </div>
           )}
         </div>
@@ -166,7 +152,7 @@ const Dashboard = () => {
                 height={'250px'}
                 series={topReferralCount}
                 labels={topReferralSource}
-              ></DonutChart>
+              />
             </div>
           </div>
         )}
