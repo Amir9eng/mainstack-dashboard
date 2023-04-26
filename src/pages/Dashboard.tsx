@@ -1,7 +1,11 @@
 import AreaChart from '../components/AreaChart';
 import DonutChart from '../components/DonutChart';
 import info from '../assets/info.svg';
-import ng from '../assets/Country=Nigeria, Style=Flag, Radius=On.svg';
+import gl from '../assets/google.svg';
+import fb from '../assets/fb.svg';
+import insta from '../assets/Instagram.svg';
+import twitter from '../assets/twitter.svg';
+import linkedin from '../assets/linkedin.svg';
 import { Tabs, TabList, Tab, TabPanel } from 'react-tabs';
 import '../components/reactTabs.css';
 import { useEffect, useState } from 'react';
@@ -16,12 +20,25 @@ const flags: any = {
   Finland: '🇫🇮',
 };
 
+const images: any = {
+  google: gl,
+  facebook: fb,
+  instagram: insta,
+  twitter: twitter,
+  linkedin: linkedin,
+};
+
 const locationColor: any = {
   Nigeria: '#599EEA',
   Germany: '#FAB70A',
   Ghana: '#F09468',
   Finland: '#0779E480',
   'United Kingdom': '#844FF6',
+  google: '#599EEA',
+  facebook: '#FAB70A',
+  instagram: '#F09468',
+  twitter: '#0779E480',
+  linkedin: '#844FF6',
 };
 
 const DonutColors = ['#599EEA', '#FAB70A', '#F09468', '#0779E480', '#844FF6'];
@@ -45,9 +62,6 @@ const Dashboard = () => {
   const topLocationCountry = topLocation.map((el) => el.country);
   const topLocationCount = topLocation.map((el) => el.count);
 
-  console.log(topReferralSource);
-  console.log(topReferralCount);
-
   return (
     <section className="w-full px-5 py-5 lg:px-16 lg:py-0">
       <h1 className="py-2 lg:py-5 font-bold">Dashboard</h1>
@@ -58,7 +72,9 @@ const Dashboard = () => {
           </h2>
           <span className="text-sm">Check out your dashboard summary.</span>
         </div>
-        <span className="text-[#FF5403]">View Analytics</span>
+        <button>
+          <span className="text-[#FF5403]">View Analytics</span>
+        </button>
       </div>
       <Tabs defaultIndex={4}>
         <TabList className="flex items-center justify-normal space-x-3 py-6 overflow-x-scroll lg:overflow-auto">
@@ -102,7 +118,11 @@ const Dashboard = () => {
         <div className=" w-full h-auto lg:h-[320px] p-8 border-[1px] border-[#EFF1F6] rounded-md">
           <div className="flex justify-between">
             <span className="font-bold">Top Locations</span>
-            <span className="font-thin text-[#FF5403]">View full reports</span>
+            <button>
+              <span className="font-thin text-[#FF5403]">
+                View full reports
+              </span>
+            </button>
           </div>
           {topLocation.length && (
             <div className="flex flex-col-reverse lg:flex-row justify-between items-center mt-5">
@@ -134,16 +154,22 @@ const Dashboard = () => {
           <div className=" w-full h-[320px] p-8 border-[1px] border-[#EFF1F6] rounded-md">
             <div className="flex justify-between">
               <span className="font-bold">Top Referral source</span>
-              <span className="font-thin text-[#FF5403]">
-                View full reports
-              </span>
+              <button>
+                <span className="font-thin text-[#FF5403]">
+                  View full reports
+                </span>
+              </button>
             </div>
             <div className="flex flex-col-reverse lg:flex-row  justify-between items-center mt-5">
               <div className="flex flex-col space-y-5">
                 {topReferral.map((el) => (
-                  <div className="flex space-x-3">
-                    <img src={ng} alt="" />
-                    <p className="min-w-fit">{el.source + el.percent} %</p>
+                  <div className="flex space-x-3 items-center">
+                    <img src={images[el.source]} alt="" className="w-5 h-5" />
+                    <p className="min-w-fit">{el.source + ' ' + el.percent}%</p>
+                    <span
+                      className="w-3 h-3 rounded-full"
+                      style={{ backgroundColor: locationColor[el.source] }}
+                    />
                   </div>
                 ))}
               </div>

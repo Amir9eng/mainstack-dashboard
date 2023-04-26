@@ -82,7 +82,7 @@ const NavBar = () => {
             <div className="avatar w-8 h-8 rounded-full overflow-hidden">
               <img src={avatar} alt="" />
             </div>
-            <span className="">Blessing Daniels</span>
+            <span className="text-sm text-[#56616B]">Blessing Daniels</span>
           </div>
           <img className="h-1" src={dots} alt="" />
         </div>
