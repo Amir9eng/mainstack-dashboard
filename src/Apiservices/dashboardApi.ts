@@ -16,7 +16,7 @@ import axios from 'axios';
 export const fetchDashboardData = async () => {
   try {
     const response = await axios.get('https://fe-task-api.mainstack.io/');
-    return response.data;
+    return response;
   } catch (err) {
     console.error(err);
   } finally {

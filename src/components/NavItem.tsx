@@ -13,7 +13,7 @@ const NavItem = ({
     <NavLink
       end
       to={to}
-      className="flex items-center space-x-3 lg:pl-16 py-1 my-1 w-full border-none lg:border-l-[3px] border-transparent rounded-sm text-[#56616B]"
+      className="flex items-center space-x-3 lg:pl-16 py-1 my-1 w-full border-l-[3px] active:border-red-500 rounded-sm text-[#56616B]"
     >
       <img src={icon} alt="" width={15} />
       <span>{children}</span>

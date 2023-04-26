@@ -1,9 +1,9 @@
-import Chart from "react-apexcharts";
-const DonutChart = ({ series, labels, width, height }: any) => {
+import Chart from 'react-apexcharts';
+const DonutChart = ({ series, labels, width, height, colors }: any) => {
   const graph: any = {
     option: {
       chart: {
-        height: "100%",
+        height: '100%',
         toolbar: {
           show: false,
         },
@@ -13,12 +13,12 @@ const DonutChart = ({ series, labels, width, height }: any) => {
         show: false,
       },
       fill: {
-        colors: ["#599EEA", "#844FF6", "#F09468", "#FAB70A", "#0FB77A"],
+        colors: colors,
       },
       plotOptions: {
         pie: {
           donut: {
-            size: "60%",
+            size: '60%',
           },
         },
       },
